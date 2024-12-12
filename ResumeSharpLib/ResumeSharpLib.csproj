@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;net9.0</TargetFrameworks>
@@ -6,12 +6,13 @@
     <Nullable>enable</Nullable>
     <PackageId>ResumeSharpLib</PackageId>
     <Description>A library for creating and manipulating Json Resume object it in C#</Description>
-    <PackageLicenseUrl>https://github.com/jacrys/ResumeSharpLib/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/jacrys/ResumeSharpLib/</PackageProjectUrl>
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
     <Authors>jacrys</Authors>
     <PackageTags>Json , Resume , JsonResume</PackageTags>
-    <PackageReleaseNotes>Upgraded compatibility, BREAKING CHANGE: The root namespace has changed to ResumeSharpLib, but the object has not changed names</PackageReleaseNotes>
+    <PackageReleaseNotes># BREAKING CHANGE: The root namespace has changed to ResumeSharpLib, but the object has not changed names
+
+* Added JsonJob to the library as well for Job Descriptions (https://jsonresume.org/job-description-schema/)</PackageReleaseNotes>
     <RepositoryType>public</RepositoryType>
     <RepositoryUrl>https://github.com/jacrys/ResumeSharpLib</RepositoryUrl>
     <RepositoryCommit></RepositoryCommit>
@@ -20,9 +21,14 @@
     <Title>ResumeSharpLib</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
