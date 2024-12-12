@@ -36,6 +36,17 @@ namespace ResumeSharpTests
             Assert.AreEqual(jsonResume.Projects.Count, 1);
         }
 
-       
+        [TestMethod]
+        public void AddJsonJobTest()
+        {
+            JsonJob jsonJob = new JsonJob();
+            jsonJob.AddSkill(new Skill())
+                .AddQualification("")
+                .AddResponsibility("");
+
+            Assert.AreEqual(jsonJob.Skills.Count, 1);
+            Assert.AreEqual(jsonJob.Qualifications.Count, 1);
+            Assert.AreEqual(jsonJob.Responsibilities.Count, 1);
+        }
     }
 }
