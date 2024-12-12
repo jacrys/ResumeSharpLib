@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using JsonResumeSharp.Utils;
+using ResumeSharpLib.Utils;
 
-namespace JsonResumeSharp.Utils.Extentions
+namespace ResumeSharpLib.Utils.Extensions
 {
-    public static class JsonResumeExtentions
+    public static class JsonResumeExtensions
     {
 
         /// <summary>
@@ -31,11 +31,6 @@ namespace JsonResumeSharp.Utils.Extentions
         {
             Utilities.AddItemToList(jsonResume.Volunteers, volunteer);
             return jsonResume;
-
-
-
-
-
         }
 
         /// <summary>
@@ -111,6 +106,40 @@ namespace JsonResumeSharp.Utils.Extentions
             return jsonResume;
         }
 
+        /// <summary>
+        /// Adds a reference item to the resume object
+        /// </summary>
+        /// <param name="jsonResume">the resume object</param>
+        /// <param name="reference">the reference item</param>
+        /// <returns></returns>
+        public static JsonResume AddReference(this JsonResume jsonResume, Reference reference)
+        {
+            Utilities.AddItemToList(jsonResume.References, reference);
+            return jsonResume;
+        }
 
+        /// <summary>
+        /// Adds a certificate item to the resume object
+        /// </summary>
+        /// <param name="jsonResume">the resume object</param>
+        /// <param name="certificate">the certificate item</param>
+        /// <returns></returns>
+        public static JsonResume AddCertificate(this JsonResume jsonResume, Certificate certificate)
+        {
+            Utilities.AddItemToList(jsonResume.Certificates, certificate);
+            return jsonResume;
+        }
+
+        /// <summary>
+        /// Adds a project item to the resume object
+        /// </summary>
+        /// <param name="jsonResume">the resume object</param>
+        /// <param name="project">the project item</param>
+        /// <returns></returns>
+        public static JsonResume AddProject(this JsonResume jsonResume, Project project)
+        {
+            Utilities.AddItemToList(jsonResume.Projects, project);
+            return jsonResume;
+        }
     }
 }

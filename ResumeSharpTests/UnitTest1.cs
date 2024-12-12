@@ -1,5 +1,5 @@
-using JsonResumeSharp;
-using JsonResumeSharp.Utils.Extentions;
+using ResumeSharpLib;
+using ResumeSharpLib.Utils.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ResumeSharpTests
@@ -8,17 +8,32 @@ namespace ResumeSharpTests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddJsonResumeTest()
         {
-           JsonResume jsonResume = new JsonResume();
+            JsonResume jsonResume = new JsonResume(); 
             jsonResume.AddAward(new Award())
-                 .AddWork(new Work())
-                 .AddEducation(new Education())
-                 .AddPublication(new Publication());
+                .AddWork(new Work())
+                .AddVolunteer(new Volunteer())
+                .AddEducation(new Education())
+                .AddPublication(new Publication())
+                .AddSkill(new Skill())
+                .AddLanguage(new Language())
+                .AddInterest(new Interest())
+                .AddReference(new Reference())
+                .AddCertificate(new Certificate())
+                .AddProject(new Project());
 
-          //  JsonResume jsonResume = JsonResume.FromJson(jsonString);
-
+            Assert.AreEqual(jsonResume.Awards.Count, 1);
             Assert.AreEqual(jsonResume.Works.Count, 1);
+            Assert.AreEqual(jsonResume.Volunteers.Count, 1);
+            Assert.AreEqual(jsonResume.Educations.Count, 1);
+            Assert.AreEqual(jsonResume.Publications.Count, 1);
+            Assert.AreEqual(jsonResume.Skills.Count, 1);
+            Assert.AreEqual(jsonResume.Languages.Count, 1);
+            Assert.AreEqual(jsonResume.Interests.Count, 1);
+            Assert.AreEqual(jsonResume.References.Count, 1);
+            Assert.AreEqual(jsonResume.Certificates.Count, 1);
+            Assert.AreEqual(jsonResume.Projects.Count, 1);
         }
 
        

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft;
+using Newtonsoft.Json;
 
-namespace JsonResumeSharp.Utils
+namespace ResumeSharpLib.Utils
 {
     class Utilities
     {
@@ -11,11 +13,8 @@ namespace JsonResumeSharp.Utils
         {
             if (list == null)
                 list = new List<T>();
-            
 
             list.Add(item);
-            
-           
         }
     }
 }
