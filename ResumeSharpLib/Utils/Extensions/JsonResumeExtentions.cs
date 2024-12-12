@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ResumeSharpLib.Utils;
-
-namespace ResumeSharpLib.Utils.Extensions
+﻿namespace ResumeSharpLib.Utils.Extensions
 {
     public static class JsonResumeExtensions
     {
