@@ -1,4 +1,4 @@
-# JsonResumeSharp
+# ResumeSharpLib
 
 An open source library for creating and manipulating [Json Resume](https://jsonresume.org/schema/ "Json Resume") object in C#
 
@@ -8,21 +8,21 @@ An open source library for creating and manipulating [Json Resume](https://jsonr
 
 ### Prerequisites
 
-.NET Standard 2.0 or higher
+.NET Standard 2.1 or higher
 
 ### Installing
 
-To install JsonResumeSharp just execute the following command in your nuget CLI :
+To install ResumeSharpLib just execute the following command in your nuget CLI :
 
 ```bash
-Install-Package JsonResumeSharp -Version 1.0.0
+Install-Package ResumeSharpLib -Version 2.0.0
 ```
 ### Usage
-To use the JsonResumeSharp do these steps: 
-1. import JsonResumeSharp namespaces to your project:
+To use the ResumeSharpLib do these steps: 
+1. import ResumeSharpLib namespaces to your project:
 ```C#
-using using JsonResumeSharp;
-using JsonResumeSharp.Utils.Extentions;
+using using ResumeSharpLib;
+using ResumeSharpLib.Utils.Extentions;
 ```
 2. Create a new instance of JsonResume:
 ```C#
