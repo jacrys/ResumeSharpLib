@@ -15,7 +15,7 @@ An open source library for creating and manipulating [Json Resume](https://jsonr
 To install ResumeSharpLib just execute the following command in your nuget CLI :
 
 ```bash
-Install-Package ResumeSharpLib -Version 2.0.0
+Install-Package ResumeSharpLib -Version 2.1.0
 ```
 ### Usage
 To use the ResumeSharpLib do these steps: 
